@@ -1,0 +1,47 @@
+/* Marquee Container */
+.marquee-left,
+.marquee-right {
+  width: 100%; /* Đảm bảo chiều rộng container không vượt quá màn hình */
+  overflow: hidden; /* Ẩn nội dung thừa ra khỏi khung nhìn */
+  position: absolute; /* Đặt phần tử con theo relative */
+  background-color: var(--background-color, #1c1c1c); /* Màu nền mặc định */
+}
+
+/* Nội dung bên trong marquee */
+.marquee-left span {
+  top: 0;
+  left: 0;
+  display: inline-block;
+  white-space: nowrap; /* Đảm bảo nội dung không xuống dòng */
+  /* Để nội dung cuộn độc lập với kích thước container */
+  animation: marquee-left 5s linear infinite; /* Animation cơ bản */
+}
+.marquee-right span {
+  display: inline-block;
+  white-space: nowrap; /* Đảm bảo nội dung không xuống dòng */
+  animation: marquee-right 5s linear infinite; /* Animation cơ bản */
+}
+
+/* Animation marquee-left (trái sang phải) */
+
+@keyframes marquee-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -100%;
+  }
+}
+
+.marquee-right {
+  animation-name: marquee-right;
+}
+
+@keyframes marquee-right {
+  from {
+    top: 100%; /* Bắt đầu ngoài khung nhìn bên trái */
+  }
+  to {
+    left: -100%; /* Kết thúc ngoài khung nhìn bên phải */
+  }
+}

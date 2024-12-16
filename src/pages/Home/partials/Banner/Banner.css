@@ -1,0 +1,12 @@
+.banner {
+  top: 100px !important;
+  left: 50% !important;
+}
+
+@media screen and (min-width: 768px) {
+  .banner {
+    top: 50% !important;
+    left: 50% !important;
+    font-size: 3rem;
+  }
+}

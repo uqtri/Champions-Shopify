@@ -1,0 +1,10 @@
+.clothing {
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+.clothing:hover {
+  transform: scale(1.02);
+}
+.heart-position {
+  right: 10px;
+}

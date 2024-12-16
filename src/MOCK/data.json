@@ -1,0 +1,30 @@
+[
+  {
+    "name": "HOODIE CLASSIC",
+    "price": 55.99,
+    "color": "gray",
+    "image": "https://product.hstatic.net/200000305259/product/mockup_hoodie_grey_1_4bd9eda5ee8d4a96a9dbd904dc099d6e_master.jpg",
+    "gender": "Male"
+  },
+  {
+    "name": "MEN'S GRAPHIC T-SHIRT",
+    "price": 25.99,
+    "color": "black",
+    "image": "https://bizweb.dktcdn.net/100/446/974/products/ao-thun-mlb-chinh-hang-heart-small-logo-ny-mau-den-3atsh0143-50bks-1.jpg?v=1710314538337",
+    "gender": "Male"
+  },
+  {
+    "name": "WOMEN'S CROPPED HOODIE",
+    "price": 45.5,
+    "color": "pink",
+    "image": "https://www.montecarlo.in/cdn/shop/products/2230101738-5-36_1.jpg?v=1702020308&width=1000",
+    "gender": "Female"
+  },
+  {
+    "name": "LADIES BASIC T-SHIRT",
+    "price": 18.0,
+    "color": "black",
+    "image": "https://down-vn.img.susercontent.com/file/6fd8e4503bb352a3d55efb70829ac847.webp",
+    "gender": "Female"
+  }
+]
