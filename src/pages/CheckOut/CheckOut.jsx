@@ -14,6 +14,7 @@ export default function CheckOut(props) {
   const cartItems = location.state?.products || [];
   const [api, contextHolder] = notification.useNotification();
 
+  console.log(cartItems, "@@@");
   const openNotification = (placement, message) => {
     api.info({
       message: `Notification`,
@@ -48,10 +49,10 @@ export default function CheckOut(props) {
       .then((response) => response.json())
       .then((data) => {
         if (data.statusCode === 200) {
-          openNotification(
-            "topRight",
-            "Place order succesfully and please check your email and confirm your order"
-          );
+          let noti =
+            "Place order succesfully and check your email to confirm your order";
+          openNotification("topRight", noti);
+          console.log("TRI");
         } else {
           openNotification("topRight", data.message);
         }

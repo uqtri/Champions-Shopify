@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Clothing from "../../components/Clothing/Clothing";
 import SizeSelector from "../../components/SizeSelector/SizeSelector";
 import { Button, Modal } from "antd";
@@ -8,6 +8,7 @@ import SizeGuide from "../../components/SizeGuide/SizeGuide";
 const URL = import.meta.env.VITE_SERVER_URL;
 
 export default function ProductDetail() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const sizes = ["XS", "S", "M", "L", "XL"];
   const [selectedSize, setSelectedSize] = useState("XS");
@@ -46,7 +47,16 @@ export default function ProductDetail() {
             </Button>
             {contextHolder}
           </div>
-          <div className="btn btn-primary"> Buy Now</div>
+          <div
+            className="btn btn-primary"
+            onClick={() => {
+              navigate("/checkout", {
+                state: { products: [{ product: product }] },
+              });
+            }}
+          >
+            Buy Now
+          </div>
         </div>
       </div>
     </div>
