@@ -3,9 +3,8 @@ import AdminRoute from "./routes/AdminRoutes";
 function App() {
   return (
     <>
-      <h1>tri</h1>
       <ClientRoute />
-      {/* <AdminRoute /> */}
+      <AdminRoute />
     </>
   );
 }

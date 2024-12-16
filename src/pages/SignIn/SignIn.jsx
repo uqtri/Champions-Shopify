@@ -24,7 +24,7 @@ export default function SignIn() {
         console.log(data, "DASDASDAS");
         if (data.statusCode === 200) {
           console.log(data.data);
-          localStorage.setItem("username", user.username);
+          localStorage.setItem("username", data.data.username);
           setUser(data.data);
           navigate("/");
         } else {
